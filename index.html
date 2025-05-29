@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TechTok</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #00e5ff;
-      text-align: center;
-      margin-top: 100px;
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 22px;
-      color: #ccc;
-    }
-  </style>
+    <title>E-Commerce Redirector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .dropdown {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
 </head>
 <body>
-  <h1>mental angel 🤬 🤬 !</h1>
-  <p>mental. Mental. Mental. 🥚 Mutta</p>
+    <h1>Choose an E-Commerce Site</h1>
+    <select id="siteSelect" class="dropdown">
+        <option value="">-- Select a Site --</option>
+        <option value="https://www.amazon.com">Amazon</option>
+        <option value="https://www.ebay.com">eBay</option>
+        <option value="https://www.aliexpress.com">AliExpress</option>
+        <option value="https://www.flipkart.com">Flipkart</option>
+    </select>
+    <br>
+    <button onclick="redirect()">Go to Site</button>
+
+    <script>
+        function redirect() {
+            const selectedSite = document.getElementById("siteSelect").value;
+            if (selectedSite) {
+                window.location.href = selectedSite; // Redirects the user
+            } else {
+                alert("Please select a site first!");
+            }
+        }
+    </script>
 </body>
 </html>
